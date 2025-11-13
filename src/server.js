@@ -6,13 +6,13 @@ const planRoutes = require('./routes/planRoutes');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
+
 app.use(express.json());
 
-// Connect to MongoDB
+
 connectDB();
 
-// Routes
+
 app.use('/plans', planRoutes);
 
 app.get('/', (req, res) => {
