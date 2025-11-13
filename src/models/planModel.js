@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const planSchema = new mongoose.Schema({
   destination: { type: String, required: true },
@@ -7,5 +7,6 @@ const planSchema = new mongoose.Schema({
   activities: { type: [String], required: true }
 });
 
-const Plan = mongoose.model('Plan', planSchema);
-module.exports = Plan;
+const Plan = mongoose.model("Plan", planSchema);
+
+export default Plan;
